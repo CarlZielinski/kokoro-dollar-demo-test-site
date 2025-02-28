@@ -24,6 +24,23 @@ A test site for the Kokoro Dollar project, made using RainbowKit, WAGMI, and Nex
 - Node.js 18.x or later
 - npm or yarn
 - A WalletConnect Project ID (get one for free at [WalletConnect Cloud](https://cloud.walletconnect.com/))
+- Sepolia testnet ETH (see below for how to get it)
+
+### Getting Sepolia Testnet ETH
+
+This application uses the Sepolia testnet. To interact with the contracts, you'll need Sepolia ETH. Here's how to get it:
+
+1. **Sepolia Faucets**:
+   - [Alchemy Sepolia Faucet](https://sepoliafaucet.com/) - Requires sign-in
+   - [Infura Sepolia Faucet](https://www.infura.io/faucet/sepolia) - Requires sign-in
+   - [QuickNode Sepolia Faucet](https://faucet.quicknode.com/ethereum/sepolia) - Requires sign-in
+   - [Chainlink Faucet](https://faucets.chain.link/sepolia) - Get both ETH and LINK
+
+2. **Sepolia PoW Faucet**:
+   - [Sepolia PoW Faucet](https://sepolia-faucet.pk910.de/) - Mine testnet ETH using your browser
+
+3. **Testnet Bridge**:
+   - If you have testnet ETH on other networks, you can use [Testnet Bridge](https://testnetbridge.com/) to bridge to Sepolia
 
 ### Installation
 
@@ -70,11 +87,33 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## How to Use
 
 1. Connect your wallet by clicking the "Connect Wallet" button in the top right corner.
-2. Make sure you're connected to the Sepolia testnet.
+2. Make sure you're connected to the Sepolia testnet. The application is configured to use Sepolia by default.
 3. Once connected, you'll see your ETH, kUSD, and sKUSD balances.
 4. To mint kUSD, enter the amount of ETH you want to deposit in the "Deposit ETH to Mint kUSD" section and click "Deposit & Mint".
 5. To stake kUSD, enter the amount of kUSD you want to stake in the "Stake kUSD for sKUSD" section, click "Approve kUSD", and then click "Stake kUSD".
 6. You can track your transaction status with the provided Etherscan links.
+
+## Troubleshooting
+
+### Sepolia Network Not Showing Up
+
+If the Sepolia network is not showing up in your wallet:
+
+1. Make sure your wallet supports the Sepolia testnet
+2. Manually add the Sepolia network to your wallet:
+   - Network Name: Sepolia
+   - RPC URL: https://rpc.sepolia.org
+   - Chain ID: 11155111
+   - Currency Symbol: ETH
+   - Block Explorer URL: https://sepolia.etherscan.io
+
+### Transaction Failures
+
+If your transactions are failing:
+
+1. Make sure you have enough Sepolia ETH for gas fees
+2. Check that you're connected to the Sepolia network
+3. Verify that you're using the correct contract addresses
 
 ## Contract Functionality
 

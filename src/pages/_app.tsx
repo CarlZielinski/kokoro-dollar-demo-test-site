@@ -12,6 +12,7 @@ import {
   lightTheme,
   type Locale 
 } from '@rainbow-me/rainbowkit';
+import { sepolia } from 'wagmi/chains';
 
 import { config } from '../wagmi';
 
@@ -32,6 +33,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <QueryClientProvider client={queryClient}>
           <RainbowKitProvider 
             locale={locale}
+            initialChain={sepolia}
             theme={lightTheme({
               accentColor: '#FF2400', // Scarlet color to match the Kokoro Dollar theme
               accentColorForeground: 'white',
